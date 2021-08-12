@@ -57,7 +57,6 @@ function sum(mixArr) {
         } else {
           continue
         }
-        console.log(total)
   }
   return total
  }
