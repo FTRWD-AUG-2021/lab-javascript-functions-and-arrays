@@ -81,6 +81,9 @@ function averageNumbers(numbers) {
 
 
 
+
+
+
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
