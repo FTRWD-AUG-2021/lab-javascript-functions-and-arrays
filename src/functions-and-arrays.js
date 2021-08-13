@@ -79,15 +79,27 @@ function averageNumbers(numbers) {
 }
 
 
-
-
-
-
-
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+// function averageWordLength(array) {
+//   let total = 0;
+//   // Get the lengths of all words in the array
+
+//   for (let i = 0; i < array.length; i++) {
+//     total += array[i].length
+//   }
+  
+//   return total / array.length
+//  }
+// function averageWordLength(array) {
+//   let total = sum(array)
+//   // Get the lengths of all words in the array
+  
+//   return total / array.length
+//  }
+
+const averageWordLength = array => sum(array)/array.length
 
 // Bonus - Iteration #4.1
 function avg() { }
@@ -107,14 +119,38 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() { }
+function uniquifyArray(array) {
+  let uniqueArray = []
+  // Remove duplicates from array
+  for (let i = 0; i < array.length; i++) {
+    if (!uniqueArray.includes(array[i])) {
+      uniqueArray.push(array[i])
+    }
+  }
+
+  return uniqueArray
+ }
 
 
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() { }
+// function doesWordExist(array, word) { 
+//   let result = false;
+
+//   for (let i = 0; i < array.length; i++){
+//     if (array[i] === word) {
+//       result = true;
+//     }
+//   }
+
+//   return result;
+// }
+
+function doesWordExist(array, word) { 
+  return array.includes(word);
+}
 
 
 
@@ -133,7 +169,33 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() { }
+function howManyTimes(array, word) {
+  // Initialize result
+  let result = 0;
+
+  // Loop through array
+  /**
+   * result = 2
+   * i = 0
+   * 
+   *            |
+   * ["word","word","word","word","word"]
+   */
+  for (let i = 0; i < array.length; i++) {
+    // Check if array[i] = the word we're looking for
+    if (array[i] === word) {
+      result++;
+    }
+  }
+
+  return result;
+}
+
+// 
+// Initialize result to an object
+// Loop through the array
+// add 1 to object."word"
+// return the object 
 
 
 
